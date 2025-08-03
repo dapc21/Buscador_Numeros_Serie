@@ -37,6 +37,8 @@ def crear_listas():
 
 def mostrar_todo():
     """Muestra todos los resultados encontrados"""
+
+    indice = 0
     print('-' * 50)
     print(f'Fecha de Búsqueda: {hoy.day}/{hoy.month}/{hoy.year}')
     print('\n')
@@ -44,7 +46,7 @@ def mostrar_todo():
     print('-------\t\t\t----------')
 
     # Usar enumerate en lugar de índice manual
-    for indice, archivo in enumerate(archivos_encontrados):
+    for archivo in enumerate(archivos_encontrados):
         print(f'{archivo}\t{nros_encontrados[indice]}')
 
     print('\n')
